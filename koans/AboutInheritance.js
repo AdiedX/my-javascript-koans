@@ -1,3 +1,5 @@
+
+
 function Muppet(age, hobby) {
   this.age = age;
   this.hobby = hobby;
@@ -21,15 +23,15 @@ SwedishChef.prototype = new Muppet();
 describe("About inheritance", function() {
   beforeEach(function(){
     this.muppet = new Muppet(2, "coding");
-	this.swedishChef = new SwedishChef(2, "cooking", "chillin");
+    this.swedishChef = new SwedishChef(2, "cooking", "chillin");
   });
 
   it("should be able to call a method on the derived object", function() {
-    expect(this.swedishChef.cook()).toEqual(FILL_ME_IN);
+    expect(this.swedishChef.cook()).toEqual("Mmmm soup!");
   });
 
   it("should be able to call a method on the base object", function() {
-    expect(this.swedishChef.answerNanny()).toEqual(FILL_ME_IN);
+    expect(this.swedishChef.answerNanny()).toEqual("Everything's cool!");
   });
 
   it("should set constructor parameters on the base object", function() {
